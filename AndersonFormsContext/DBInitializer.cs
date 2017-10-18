@@ -1,4 +1,5 @@
 ﻿using AndersonFormsEntity;
+using System.Collections.Generic;
 using System.Data.Entity;
 
 namespace AndersonFormsContext
@@ -10,16 +11,43 @@ namespace AndersonFormsContext
         }
         protected override void Seed(Context context)
         {
-            ETypeOfDevice eTypeOfDevice = new ETypeOfDevice
+            IEnumerable<ETypeOfDevice> eTypeOfDevices;
+            eTypeOfDevices = new List<ETypeOfDevice>()
             {
-                Name = "Mobile Phone"
+                new ETypeOfDevice
+                {
+                    Name = "Mobile Phone"
+                },
+                new ETypeOfDevice
+                {
+                    Name = "Laptop"
+                }
             };
-            context.TypeOfDevices.Add(eTypeOfDevice);
-            eTypeOfDevice.Name = "Laptop";
-            context.TypeOfDevices.Add(eTypeOfDevice);
+            context.TypeOfDevices.AddRange(eTypeOfDevices);
 
+
+            IEnumerable<ERequirement> eRequirements;
+            eRequirements = new List<ERequirement>()
+            {
+                new ERequirement
+                {
+                    Name = "SSS Id"
+                },
+                new ERequirement
+                {
+                    Name = "Birth Certificate"
+                },
+                new ERequirement
+                {
+                    Name = "PAG-IBIG"
+                },
+                new ERequirement
+                {
+                    Name = "PhilHealth"
+                }
+            };
+            context.Requirements.AddRange(eRequirements);
             context.SaveChanges();
-            base.Seed(context);
         }
     }
 }

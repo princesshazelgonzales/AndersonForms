@@ -10,48 +10,53 @@ namespace AndersonFormsWeb.Controllers
     [RoutePrefix("Employee")]
     public class EmployeeController : Controller
     {
-        //private IFEmployee _iFEmployee;
+        private IFEmployee _iFEmployee;
 
-        //public EmployeeController()
-        //{
-        //    _iFEmployee = new FEmployee();
-        //}
+        public EmployeeController()
+        {
+            _iFEmployee = new FEmployee();
+        }
 
-        //[Route("")]
-        //[HttpGet]
-        //public ActionResult Index()
-        //{
+        public ActionResult Employee()
+        {
+            return View(new FEmployee());
+        }
 
-        //    return View();
-        //}
+        [Route("")]
+        [HttpGet]
+        public ActionResult Index()
+        {
 
-        //[HttpGet]
-        //public new ActionResult Profile()
-        //{
-        //    return View();
-        //}
+            return View();
+        }
 
-        //[HttpGet]
-        //public ActionResult Create()
-        //{
-        //    return View(new Employee());
-        //}
-        //[HttpPost]
+        [HttpGet]
+        public new ActionResult Profile()
+        {
+            return View();
+        }
 
-        //public JsonResult Create(Employee employee)
-        //{
+        [HttpGet]
+        public ActionResult Create()
+        {
+            return View(new Employee());
+        }
+        [HttpPost]
 
-        //    try
-        //    {
-        //        employee.CompanyId = 1;
-        //        employee.PositionId = 1;
-        //        employee = _iFEmployee.Create(employee);
-        //        return Json("");
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        return Json(ex);
-        //    }
+        public JsonResult Create(Employee employee)
+        {
+
+            try
+            {
+                employee.CompanyId = 1;
+                employee.PositionId = 1;
+                employee = _iFEmployee.Create(employee);
+                return Json("");
+            }
+            catch (Exception ex)
+            {
+                return Json(ex);
+            }
 
         //}
         //public JsonResult GetData()
@@ -76,7 +81,7 @@ namespace AndersonFormsWeb.Controllers
         //    {
         //        return Json(exception);
         //    }
-        //}
+        }
 
 
     }

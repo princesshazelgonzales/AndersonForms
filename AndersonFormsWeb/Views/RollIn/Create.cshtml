@@ -1,0 +1,17 @@
+﻿@using AndersonFormsWeb.Models;
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+
+<form method="post" action="~/RollIn/Create">
+    @Html.Partial("~/Views/Employee/_Employee.cshtml");
+
+    <br />
+    @Html.Partial("~/Views/Requirement/_Requirements.cshtml");
+  
+        <input type="submit" value="button" />
+    </form>

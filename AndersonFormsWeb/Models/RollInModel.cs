@@ -9,5 +9,6 @@ namespace AndersonFormsWeb.Models
         public Employee Employee { get; set; }
 
         public List<RequestedItem> RequestedItems { get; set; }
+        public List<Requirement> Requirements { get; set; }
     }
 }

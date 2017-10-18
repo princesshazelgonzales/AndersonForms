@@ -462,6 +462,8 @@
     <Compile Include="Controllers\ByodController.cs" />
     <Compile Include="Controllers\EmployeeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\RequirementController.cs" />
+    <Compile Include="Controllers\RollInController.cs" />
     <Compile Include="Controllers\RequestedItemController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -485,7 +487,7 @@
     <Content Include="Views\Employee\Create.cshtml" />
     <Content Include="Views\Shared\_PartialScript.cshtml" />
     <Content Include="Views\RequestedItem\Create.cshtml" />
-    <Content Include="Views\Employee\_Employee.cshtml" />
+    <Content Include="Views\Employee\List.cshtml" />
     <Content Include="bower_components\bootstrap\.bower.json" />
     <Content Include="bower_components\bootstrap\bower.json" />
     <Content Include="bower_components\bootstrap\CHANGELOG.md" />
@@ -593,6 +595,12 @@
     <Content Include="Views\Shared\_MainLayout.cshtml" />
     <Content Include="Views\Home\Aboutus.cshtml" />
     <Content Include="Views\Shared\_LayoutPage.cshtml" />
+    <Content Include="Views\Employee\Index.cshtml" />
+    <Content Include="Views\Employee\Profile.cshtml" />
+    <Content Include="Views\RollIn\Create.cshtml" />
+    <Content Include="Views\Employee\_Employee.cshtml" />
+    <Content Include="Views\Requirement\Index.cshtml" />
+    <Content Include="Views\Requirement\_Requirements.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

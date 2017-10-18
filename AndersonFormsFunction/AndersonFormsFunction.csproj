@@ -60,7 +60,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FRequirement.cs" />
     <Compile Include="FRequestedItem.cs" />
+    <Compile Include="IFRequirement.cs" />
     <Compile Include="IFByod.cs" />
     <Compile Include="FByod.cs" />
     <Compile Include="IFRequestedItem.cs" />
@@ -79,6 +81,9 @@
       <Project>{1f2a4cff-3e5e-4da1-b888-c40322a811c6}</Project>
       <Name>AndersonFormsModel</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

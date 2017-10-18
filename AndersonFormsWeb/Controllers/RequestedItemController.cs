@@ -30,8 +30,6 @@ namespace AndersonFormsWeb.Controllers
             return View();
         }
 
-        
-
         [HttpGet]
         public ActionResult Create()
         {
