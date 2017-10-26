@@ -24,14 +24,13 @@ namespace AndersonFormsContext
                 }
             };
             context.TypeOfDevices.AddRange(eTypeOfDevices);
-
-
+                   
             IEnumerable<ERequirement> eRequirements;
             eRequirements = new List<ERequirement>()
             {
                 new ERequirement
                 {
-                    Name = "SSS Id"
+                    Name = "SSS"
                 },
                 new ERequirement
                 {
@@ -43,7 +42,7 @@ namespace AndersonFormsContext
                 },
                 new ERequirement
                 {
-                    Name = "PhilHealth"
+                    Name = "Phil-Health"
                 }
             };
             context.Requirements.AddRange(eRequirements);

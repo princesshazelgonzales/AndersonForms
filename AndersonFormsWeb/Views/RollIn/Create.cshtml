@@ -4,14 +4,14 @@
     ViewBag.Title = "Create";
 }
 
-<h2>Create</h2>
-
+<h2>Create</h2><br />
 
 <form method="post" action="~/RollIn/Create">
-    @Html.Partial("~/Views/Employee/_Employee.cshtml");
-
-    <br />
-    @Html.Partial("~/Views/Requirement/_Requirements.cshtml");
-  
-        <input type="submit" value="button" />
-    </form>
+    <div class="row">
+        @Html.Partial("~/Views/Employee/_Employee.cshtml")
+    </div>
+    <div class="row">
+        @Html.Partial("~/Views/Requirement/_Requirements.cshtml")
+    </div>
+   <input type="submit" class="btn btn-success btn-md" value="Submit" />
+</form>

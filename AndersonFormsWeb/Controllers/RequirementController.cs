@@ -11,7 +11,7 @@ using System.Collections.Generic;
 
 namespace AndersonFormsWeb.Controllers
 {
-    
+
     public class RequirementController : Controller
     {
         private IFRequestedItem _iFRequestedItem;
@@ -24,13 +24,11 @@ namespace AndersonFormsWeb.Controllers
             _iFRequirements = new FRequirement();
             _iFEmployee = new FEmployee();
         }
-        
+
         [HttpGet]
         public ActionResult Index()
         {
             return View();
         }
-        
-        
     }
 }

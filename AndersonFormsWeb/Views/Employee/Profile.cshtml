@@ -1,17 +1,7 @@
-﻿
+﻿@using AndersonFormsWeb.Models;
 @{
-    ViewBag.Title = "Profile";
+    ViewBag.Title = "Details";
 }
-
-<h2>Profile</h2>
-<html>
-<body>
-    <div class="container">
-         <div class="fa-align-left">
-             Employee ID :<input type="text" name="Employee.EmployeeId" /><br />
-
-         </div>
-     </div>
-</body>
-</html>
-
+<div class="row">
+    @Html.Partial("~/Views/Employee/.cshtml")
+</div>

@@ -1,67 +1,57 @@
 ﻿
 @{
-    ViewBag.Title = "Employee";
+    ViewBag.Title = "List";
 }
-<h2>Employee</h2>
-<html>
-<body>
-    <br /><br />
-    <div layout="row" layout-wrap>
-        <div class="container">
-            <form method="post" action="">
-                <label><input tyoe="checkbox" value="">Diana</label>
-                <div class="checkbox">
-                    <label><input type="checkbox" vlaue="" />Hazel</label>
-                    <div class="checkbox">
-                        <label><input type="checkbox" value="" />Mico</label>
-                        <div class="checkbox">
-                            <label><input type="checkbox" value="" />Christian</label>
-                            <div class="checkbox">
-                                <label><input type="checkbox" value="" />Khristel</label>
-                                <div class="checkbox">
-                                    <label><input type="checkbox" value="" />Vince</label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <br />
-                <br />
-                <div class="container">
-                    <h2>Form control: Managers</h2>
-                    <div class="checkbox">
-                        <label><input type="checkbox" value="" />Sample 1</label>
-                        <div class="=checkbox">
-                            <label><input type="checkbox" value="" />Sample 2</label>
-                            <div class="checkbox">
-                                <label><input type="checkbox" value="" />Sample 3</label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <p>Additional Comment(Optional)</p>
-                <textarea rows="3" cols="5" class="form-control" placeholder="Enter your comment here"></textarea>
-                <br />
-                <br />
+<h2>List</h2>
+<div ng-controller="EmployeeController as model" ng-init="model.List()">
+    <form method="post" action="~/Employee/List">
+        <br />
 
-                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">OK</button>
 
-                <!--Modal Content-->
-                <div class="modal-content">
-                    <div class="madal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title">Send</h4>
-                    </div>
-                </div>
-                <div class="modal-body">
-                    <p>Do you want to submit?</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Back</button>
-                    <a href="/Home/Index" class="btn btn-primary btn-lg">Submit</a>
-                </div>
-            </form>
-        </div>
-    </div>   
-</body>
-</html>
+
+
+        <label for="Employee Id" hidden>Employee Id:</label><br />
+
+        @*<ui-select ng-model="Employee.CompanyId.selected" ng-change="selectedCompanyId()" reset-search-input="false">
+                <ui-select-match placeholder="Search or select a Company Id...">
+                    {{$select.selected.CompanyId}}
+                </ui-select-match>
+                <ui-select-choices repeat="item in (Employee.CompanyId| filter: $select.search)" position="down"| orderBy="EmployeeName" >{{item.FirstName}}
+
+
+                </ui-select-choices>
+            </ui-select>*@
+
+
+
+
+
+        <input list="Employee Id" type="hidden" class="form-control" name="Employee.Employee Id" value="@Model.Employee Id">
+        <input type="hidden" name="Employee.Employee Id" value="@Model.Employee Id" hidden />
+        <datalist id="Employee Id" hidden>
+            <option value="1" hidden>
+            <option value="2" hidden>
+        </datalist>
+        <label for="Hiring Manager" hidden>Hiring Manager:</label>
+        <input type="hidden" class="form-control" name="Employee.Hiring Manager" value="@Model.Hiring Manager" />
+        <label for="Namer">Name:</label>
+        <input type="text" class="form-control" name="Employee.Name" value="@Model.Name" />
+        <label for="MiddleName">MiddleName:</label>
+        <input type="text" class="form-control" name="Employee.MiddleName" value="@Model.MiddleName" />
+        <label for="LastName">Lastname:</label>
+        <input type="text" class="form-control" name="Employee.Lastname" value="@Model.LastName" />
+        <label for="Department">Department:</label>
+        <input type="text" class="form-control" name="Employee.Department" value="@Model.Department" />
+        <br />
+        <input type="Submit" value="Save" class="btn btn-primary" style="margin-right:5px;" /> &nbsp;&nbsp;
+        <a href="/Employee/Index" class="btn btn-danger"><i class="glyphicon glyphicon-close "></i>Close</a>
+
+    </form>
+
+    @*<a href="/Company/Index" ng-click="model.Update(Company)" class="btn btn-primary" placeholder="{{Company.Companyname}}"> <i class="glyphicon glyphicon-edit"></i> Save Changes</a>*@
+
+    @*<a href="/Position/Index" class="btn btn-info" type="button" ng-click="model.Update()" value="{{ Position.PositionName }}"><i class="glyphicon glyphicon-edit"></i> Edit</a>*@
+
+
+</div>
+

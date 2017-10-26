@@ -5,16 +5,15 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace AndersonFormsEntity
 {
-    [Table("Requirement")]
-    public class ERequirement : EBase
+    [Table("NeededRequirement")]
+    public class ENeededRequirement : EBase
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int NeededRequirementId { get; set; }
+        [ForeignKey("Requirement")]
         public int RequirementId { get; set; }
 
-        [StringLength(50)]
-        public string Name { get; set; }
-
-        public virtual ICollection<ENeededRequirement> ProvidedRequirements { get; set; }
+        public virtual ERequirement Requirement { get; set; }
     }
 }
